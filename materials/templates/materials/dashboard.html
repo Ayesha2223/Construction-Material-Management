@@ -1,0 +1,62 @@
+{% extends 'materials/base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+
+                    {% if employee.image %}
+                    <img src="{{ employee.image.url }}">
+                    {% else %}
+                    <img src="materials/static/images/default_image.jpg">
+                    {% endif %}
+                
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{ employee.name }}</h5>
+                        <p class="card-text">{{ employee.role }}</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <h4>Assigned Tasks</h4>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Deadline</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for task in tasks %}
+                        <tr>
+                            <td>{{ task.title }}</td>
+                            <td>{{ task.deadline }}</td>
+                            <td>{{ task.status }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                <h4>Performance</h4>
+                <p>Feedback: {{ employee.feedback }}</p>
+                <p>Overall Rating: {{ employee.rating }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+{% endblock %}

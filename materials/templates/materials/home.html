@@ -1,0 +1,323 @@
+{% extends 'materials/base.html' %}
+
+{% block title %}MaterialHub - Home{% endblock %}
+
+{% block content %}
+<!-- Main Banner Section -->
+<section class="main-banner">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 animate-on-scroll">
+                <h1 class="display-4">Construction Materials & Services</h1>
+                <p class="lead">Your trusted partner for high-quality construction materials and professional services.</p>
+                <div class="banner-buttons">
+                    <a href="{% url 'services' %}" class="btn btn-primary btn-lg">Our Services</a>
+                    <a href="#" class="btn btn-outline-light btn-lg" data-toggle="modal" data-target="#inquiryModal">Get a Quote</a>
+                </div>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block animate-on-scroll">
+                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Construction Site" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Statistics Section -->
+<section class="stats-section py-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-3 col-6 mb-4 animate-on-scroll">
+                <div class="stat-card">
+                    <i class="fas fa-building fa-3x mb-3"></i>
+                    <h2 class="counter">500</h2>
+                    <p>Projects Completed</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-4 animate-on-scroll">
+                <div class="stat-card">
+                    <i class="fas fa-users fa-3x mb-3"></i>
+                    <h2 class="counter">120</h2>
+                    <p>Expert Team Members</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-4 animate-on-scroll">
+                <div class="stat-card">
+                    <i class="fas fa-smile fa-3x mb-3"></i>
+                    <h2 class="counter">450</h2>
+                    <p>Happy Clients</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-4 animate-on-scroll">
+                <div class="stat-card">
+                    <i class="fas fa-award fa-3x mb-3"></i>
+                    <h2 class="counter">25</h2>
+                    <p>Years of Experience</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0 animate-on-scroll">
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="About Us" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-6 animate-on-scroll">
+                <h2 class="section-title">About MaterialHub</h2>
+                <p class="section-subtitle">Your Trusted Construction Partner Since 1999</p>
+                <p>MaterialHub is a leading provider of construction materials and services, dedicated to delivering excellence in every project. With over 25 years of experience, we have established ourselves as a trusted partner for contractors, builders, and homeowners.</p>
+                <p>Our commitment to quality, reliability, and customer satisfaction has made us the preferred choice for construction needs across the region.</p>
+                <a href="{% url 'about' %}" class="btn btn-primary">Learn More About Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services-section py-5 bg-light">
+    <div class="container">
+        <div class="section-header text-center mb-5 animate-on-scroll">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive Construction Solutions</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-truck-loading"></i>
+                    </div>
+                    <h3>Material Supply</h3>
+                    <p>High-quality construction materials delivered to your site on time.</p>
+                    <a href="{% url 'services' %}" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>Labor Services</h3>
+                    <p>Skilled professionals for all your construction labor needs.</p>
+                    <a href="{% url 'services' %}" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Equipment Rental</h3>
+                    <p>Modern construction equipment available for rent at competitive rates.</p>
+                    <a href="{% url 'services' %}" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <h3>Project Planning</h3>
+                    <p>Expert consultation and planning for your construction projects.</p>
+                    <a href="{% url 'services' %}" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-roller"></i>
+                    </div>
+                    <h3>Finishing Work</h3>
+                    <p>Professional finishing services to complete your construction project.</p>
+                    <a href="{% url 'services' %}" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Renovation</h3>
+                    <p>Complete renovation services for residential and commercial properties.</p>
+                    <a href="{% url 'services' %}" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4 animate-on-scroll">
+            <a href="{% url 'services' %}" class="btn btn-primary btn-lg">View All Services</a>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section py-5">
+    <div class="container">
+        <div class="section-header text-center mb-5 animate-on-scroll">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <p class="section-subtitle">Testimonials from Satisfied Customers</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"MaterialHub provided exceptional service for our commercial building project. The materials were top-quality and delivered on time."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Smith" class="rounded-circle">
+                        <div>
+                            <h5>John Smith</h5>
+                            <p>Project Manager, ABC Construction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"We've been working with MaterialHub for over 5 years, and they consistently deliver quality materials at competitive prices. Highly recommended!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson" class="rounded-circle">
+                        <div>
+                            <h5>Sarah Johnson</h5>
+                            <p>Owner, Johnson Builders</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The labor services provided by MaterialHub were excellent. The workers were skilled, professional, and completed the job ahead of schedule."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Michael Brown" class="rounded-circle">
+                        <div>
+                            <h5>Michael Brown</h5>
+                            <p>Contractor, Brown & Associates</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section py-5">
+    <div class="container">
+        <div class="cta-content text-center animate-on-scroll">
+            <h2>Ready to Start Your Project?</h2>
+            <p class="lead">Contact us today for a free consultation and quote.</p>
+            <div class="cta-buttons">
+                <a href="{% url 'contact' %}" class="btn btn-primary btn-lg">Contact Us</a>
+                <a href="#" class="btn btn-outline-light btn-lg" data-toggle="modal" data-target="#inquiryModal">Request a Quote</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Inquiry Modal -->
+<div class="modal fade" id="inquiryModal" tabindex="-1" role="dialog" aria-labelledby="inquiryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="inquiryModalLabel">Request a Quote</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="inquiryForm" method="post" action="{% url 'submit_inquiry' %}">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="name">Full Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="project_type">Project Type</label>
+                            <select class="form-control" id="project_type" name="project_type" required>
+                                <option value="" selected disabled>Select Project Type</option>
+                                <option value="Residential">Residential</option>
+                                <option value="Commercial">Commercial</option>
+                                <option value="Industrial">Industrial</option>
+                                <option value="Infrastructure">Infrastructure</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Project Details</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="privacy_policy" name="privacy_policy" required>
+                            <label class="custom-control-label" for="privacy_policy">I agree to the <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a>.</label>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-lg">Submit Request</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Counter animation for statistics
+    document.addEventListener('DOMContentLoaded', function() {
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+        
+        const animateCounter = (counter) => {
+            const target = +counter.innerText;
+            const count = 0;
+            const inc = target / speed;
+            
+            const updateCount = () => {
+                const currentCount = +counter.innerText;
+                if (currentCount < target) {
+                    counter.innerText = Math.ceil(currentCount + inc);
+                    setTimeout(updateCount, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            
+            updateCount();
+        };
+        
+        // Use Intersection Observer to trigger counter animation when in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        counters.forEach(counter => {
+            counter.innerText = '0';
+            observer.observe(counter);
+        });
+    });
+</script>
+{% endblock %}

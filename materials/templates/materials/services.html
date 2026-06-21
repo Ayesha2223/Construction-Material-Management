@@ -1,0 +1,213 @@
+{% extends 'materials/base.html' %}
+
+{% block title %}MaterialHub - Services{% endblock %}
+
+{% block content %}
+<!-- Services Banner -->
+<section class="page-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center animate-on-scroll">
+                <h1 class="display-4">Our Services</h1>
+                <p class="lead">Comprehensive solutions for all your construction needs</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services-main py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Material Supply -->
+            <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-truck-loading"></i>
+                    </div>
+                    <h3>Material Supply</h3>
+                    <p>High-quality construction materials delivered to your site on time.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Cement & Concrete</li>
+                        <li><i class="fas fa-check"></i> Steel & Metal Products</li>
+                        <li><i class="fas fa-check"></i> Bricks & Blocks</li>
+                        <li><i class="fas fa-check"></i> Sand & Aggregates</li>
+                    </ul>
+                    <a href="{% url 'material_supply_request' %}" class="btn btn-primary">Request Service</a>
+                </div>
+            </div>
+            
+            <!-- Labor Services -->
+            <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>Labor Services</h3>
+                    <p>Skilled professionals for all your construction labor needs.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Skilled Masons</li>
+                        <li><i class="fas fa-check"></i> Carpenters</li>
+                        <li><i class="fas fa-check"></i> Electricians</li>
+                        <li><i class="fas fa-check"></i> Plumbers</li>
+                    </ul>
+                    <a href="{% url 'labor_services_request' %}" class="btn btn-primary">Request Service</a>
+                </div>
+            </div>
+            
+            <!-- Equipment Rental -->
+            <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Equipment Rental</h3>
+                    <p>Modern construction equipment available for rent at competitive rates.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Excavators & Loaders</li>
+                        <li><i class="fas fa-check"></i> Concrete Mixers</li>
+                        <li><i class="fas fa-check"></i> Scaffolding</li>
+                        <li><i class="fas fa-check"></i> Power Tools</li>
+                    </ul>
+                    <a href="{% url 'equipment_rental_request' %}" class="btn btn-primary">Request Service</a>
+                </div>
+            </div>
+            
+            <!-- Project Planning -->
+            <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <h3>Project Planning</h3>
+                    <p>Expert consultation and planning for your construction projects.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Project Estimation</li>
+                        <li><i class="fas fa-check"></i> Timeline Planning</li>
+                        <li><i class="fas fa-check"></i> Resource Allocation</li>
+                        <li><i class="fas fa-check"></i> Risk Assessment</li>
+                    </ul>
+                    <a href="{% url 'project_planning_request' %}" class="btn btn-primary">Request Service</a>
+                </div>
+            </div>
+            
+            <!-- Finishing Work -->
+            <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-roller"></i>
+                    </div>
+                    <h3>Finishing Work</h3>
+                    <p>Professional finishing services to complete your construction project.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Painting</li>
+                        <li><i class="fas fa-check"></i> Flooring</li>
+                        <li><i class="fas fa-check"></i> Tiling</li>
+                        <li><i class="fas fa-check"></i> Interior Decoration</li>
+                    </ul>
+                    <a href="{% url 'finishing_work_request' %}" class="btn btn-primary">Request Service</a>
+                </div>
+            </div>
+            
+            <!-- Renovation -->
+            <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Renovation</h3>
+                    <p>Complete renovation services for residential and commercial properties.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Kitchen Renovation</li>
+                        <li><i class="fas fa-check"></i> Bathroom Remodeling</li>
+                        <li><i class="fas fa-check"></i> Office Renovation</li>
+                        <li><i class="fas fa-check"></i> Structural Modifications</li>
+                    </ul>
+                    <a href="{% url 'renovation_request' %}" class="btn btn-primary">Request Service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="why-choose-us py-5 bg-light">
+    <div class="container">
+        <div class="section-header text-center mb-5 animate-on-scroll">
+            <h2 class="section-title">Why Choose Us</h2>
+            <p class="section-subtitle">What Makes MaterialHub Different</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Quality Assurance</h3>
+                    <p>We ensure the highest quality materials and workmanship for all our services.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Timely Delivery</h3>
+                    <p>We understand the importance of time in construction projects and ensure on-time delivery.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Competitive Pricing</h3>
+                    <p>We offer the best rates in the market without compromising on quality.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Our customer support team is available round the clock to assist you.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Expert Team</h3>
+                    <p>Our team consists of experienced professionals in the construction industry.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 animate-on-scroll">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Warranty</h3>
+                    <p>We provide warranty for all our services and materials for your peace of mind.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section py-5">
+    <div class="container">
+        <div class="cta-content text-center animate-on-scroll">
+            <h2>Ready to Start Your Project?</h2>
+            <p class="lead">Contact us today for a free consultation and quote.</p>
+            <div class="cta-buttons">
+                <a href="{% url 'contact' %}" class="btn btn-primary btn-lg">Contact Us</a>
+                <a href="#" class="btn btn-outline-light btn-lg" data-toggle="modal" data-target="#inquiryModal">Request a Quote</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

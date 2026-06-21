@@ -1,0 +1,175 @@
+{% extends 'materials/base.html' %}
+{% load static %}
+
+{% block title %}Material Supply Request{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="text-center">Request Material Supply</h2>
+    <div class="row">
+        <!-- Cement Card -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+                <img src="{% static 'images/cement.jpg' %}" class="card-img-top" alt="Cement">
+                <div class="card-body">
+                    <h5 class="card-title">Cement</h5>
+                    <p class="card-text">High-quality cement for your construction needs.</p>
+                    <button class="btn btn-primary" onclick="openForm('cementForm')">Request Cement</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Steel Card -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+                <img src="{% static 'images/steel.jpg' %}" class="card-img-top" alt="Steel">
+                <div class="card-body">
+                    <h5 class="card-title">Steel</h5>
+                    <p class="card-text">Durable steel products for all construction applications.</p>
+                    <button class="btn btn-primary" onclick="openForm('steelForm')">Request Steel</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Aggregates Card -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+                <img src="{% static 'images/aggregates.jpg' %}" class="card-img-top" alt="Aggregates">
+                <div class="card-body">
+                    <h5 class="card-title">Aggregates</h5>
+                    <p class="card-text">Quality aggregates for concrete and construction.</p>
+                    <button class="btn btn-primary" onclick="openForm('aggregatesForm')">Request Aggregates</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Cement Request Form -->
+<div id="cementForm" class="popup-box" style="display:none;">
+    <div class="popup-content">
+        <div class="popup-header">
+            <h3>Request Cement</h3>
+            <span class="close-btn" onclick="closeForm('cementForm')">&times;</span>
+        </div>
+        <div class="popup-body">
+            <form action="{% url 'submit_service_request' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="service_type" value="Cement">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="name">Full Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="phone_number">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone_number" name="phone_number" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <input type="text" class="form-control" id="quantity" name="quantity" placeholder="e.g., 10 tons" required>
+                </div>
+                <div class="form-group">
+                    <label for="details">Additional Details</label>
+                    <textarea class="form-control" id="details" name="details" rows="2"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit Request</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Steel Request Form -->
+<div id="steelForm" class="popup-box" style="display:none;">
+    <div class="popup-content">
+        <div class="popup-header">
+            <h3>Request Steel</h3>
+            <span class="close-btn" onclick="closeForm('steelForm')">&times;</span>
+        </div>
+        <div class="popup-body">
+            <form action="{% url 'submit_service_request' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="service_type" value="Steel">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="name">Full Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="phone_number">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone_number" name="phone_number" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <input type="text" class="form-control" id="quantity" name="quantity" placeholder="e.g., 10 tons" required>
+                </div>
+                <div class="form-group">
+                    <label for="details">Additional Details</label>
+                    <textarea class="form-control" id="details" name="details" rows="2"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit Request</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Aggregates Request Form -->
+<div id="aggregatesForm" class="popup-box" style="display:none;">
+    <div class="popup-content">
+        <div class="popup-header">
+            <h3>Request Aggregates</h3>
+            <span class="close-btn" onclick="closeForm('aggregatesForm')">&times;</span>
+        </div>
+        <div class="popup-body">
+            <form action="{% url 'submit_service_request' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="service_type" value="Aggregates">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="name">Full Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="phone_number">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone_number" name="phone_number" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <input type="text" class="form-control" id="quantity" name="quantity" placeholder="e.g., 10 tons" required>
+                </div>
+                <div class="form-group">
+                    <label for="details">Additional Details</label>
+                    <textarea class="form-control" id="details" name="details" rows="2"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit Request</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+function openForm(formId) {
+    document.getElementById(formId).style.display = "block";
+}
+
+function closeForm(formId) {
+    document.getElementById(formId).style.display = "none";
+}
+</script>
+
+{% endblock %}
